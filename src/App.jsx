@@ -9,14 +9,13 @@ const App = () => {
     setUsersList((prevState) => {
       return [...prevState, { username, age, id: Math.random().toString() }]
     })
-    console.log(usersList)
   }
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </>
   )
 }
 
